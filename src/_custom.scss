@@ -1,0 +1,49 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.carousel-control-prev,
+.carousel-control-next {
+
+    position: unset;
+    display: inline;
+    svg{
+        color: #84888C;
+        width: 52.5px;
+        height: 18.4px;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        display: none;
+    }
+}
+.carousel-control-prev{
+    margin-right: 8.5px;
+}
+
+.carousel-control-next{
+    margin-left: 8.5px;
+}
+
+@media all and (min-width: 1024px){
+    .carousel-control-prev, .carousel-control-next{
+        width: unset;
+    }
+
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item{
+        display: block;
+    }
+
+    .carousel-inner{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 80px;
+    }
+
+    .carousel-item{
+        grid-row: 1;
+    }
+
+}
+
